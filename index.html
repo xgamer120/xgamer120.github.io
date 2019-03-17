@@ -1,0 +1,16 @@
+---
+layout: default
+title: Domov
+---
+<div class="container" id="news">
+    <h1>Novinky</h1>
+
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <h2><a href="{{ post.url }}">{{ post.title | upcase }}</a></h2>
+            <p>{{ post.excerpt }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

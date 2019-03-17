@@ -1,0 +1,16 @@
+---
+layout: default
+title: Dokumentacie
+---
+
+<div class="container" id="documentations">
+  <h1>Dokumentacie</h1>
+
+  <ul>
+    {% for documentation in site.documentations %}
+      <li>
+        <h2><a href="{{ documentation.url }}">{{ documentation.name }}</a></h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

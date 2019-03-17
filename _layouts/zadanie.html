@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="container" >
+  <div class="row" >
+    <div class="col-md" align="center" id="nadpis_zadanie">
+        <h1>{{ page.title }}</h1>
+        <p>
+          {{ page.date | date_to_string }}
+        </p>
+    </div>
+    <div class="col-md" align="center" id="dokumentacia_zadanie">
+        {% assign dokumentacia = site.documentations | where: 'short_name', page.dokumentacia | first %}
+        {% if dokumentacia %}
+        <a href="{{ dokumentacia.url }}">
+          <button type="button" class="btn btn-info">Dokumentacia</button>
+        </a>
+        {% endif %}
+    </div>
+  </div>
+
+  <div class="row" id="main_content_zadanie">
+      {{ content }}
+  </div>
+</div>

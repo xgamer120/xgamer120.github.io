@@ -1,0 +1,19 @@
+---
+layout: default
+title: Projekty
+---
+<div class="container">
+  <h1>Moje projekty</h1>
+
+  <ul>
+    {% for projekt in site.projects %}
+    <div class="row" id="projekt">
+      <li>
+        <h2><a href="{{ projekt.url }}">{{ projekt.title }}</a></h2>
+        <p>{{ projekt.excerpt }}</p>
+      </li>
+    </div>
+    {% endfor %}
+  </ul>
+
+</div>

@@ -1,0 +1,24 @@
+---
+layout: default
+title: WPUB
+---
+
+<div class="container" align="center">
+  <h1>Zadania</h1>
+  <div class="row">
+
+    <div class="col-md" align="center" id="main_content">
+      <div class="row" id="zadania">
+        {% for zadanie in site.assignments %}
+        <div class="col-md-4 col-sm-6">
+          <div id="zadanie">
+            <h2><a href="{{ zadanie.url }}">{{ zadanie.title }}</a></h2>
+            <p>{{ zadanie.excerpt }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>

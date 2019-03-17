@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="container" align="center" id="project">
+  <div class="row"  id="nadpis">
+    <div class="col-md">
+        <h1>{{ page.title }}</h1>
+        <p>
+            {{ page.date | date_to_string }}
+          </p>
+    </div>
+  </div>
+  <div class="row" id="main_content">
+    {{ content }}
+  </div>
+</div>

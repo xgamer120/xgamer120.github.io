@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="container">
+
+  <div class="row" align="center">
+    <div class="col-md" id="title_page">
+
+      <div class="row" >
+        <div class="col-md" id="title">
+          <h1>{{ page.name }}</h1>
+          <h2>WPUB</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md" id="zadanie_link">
+          {% assign zadanie = site.assignments | where: 'dokumentacia', page.short_name | first %}
+          <a href="{{zadanie.url }}">
+            <button type="button" class="btn btn-primary">{{ zadanie.title }}</button>
+          </a>
+        </div>
+        <div class="col-md" id="autor">
+          <h3>Viktor Beno</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md" id="main_content_dokumentacia">
+      {{ content }}
+    </div>
+  </div>
+</div>

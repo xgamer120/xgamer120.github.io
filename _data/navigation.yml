@@ -1,0 +1,10 @@
+- name: Domov
+  link: /
+- name: O mne
+  link: /about/
+- name: Moje Projekty
+  link: /projects/
+- name: Webove publikovanie
+  link: /wpub/
+- name: Dokumentacie
+  link: /documentations/
